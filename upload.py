@@ -26,48 +26,54 @@ class PharmgkbUploader(biothings.hub.dataload.uploader.BaseSourceUploader):
     @classmethod
     def get_mapping(klass):
         return         {
-            'annotations': {
-                'properties': {
-                    'Alleles': {
-                        'type': 'text'
-                    },
-                    'Annotation ID': {
-                        'type': 'integer'
-                    },
-                    'Chemical': {
-                        'type': 'text'
-                    },
-                    'Chromosome': {
-                        'normalizer': 'keyword_lowercase_normalizer',
-                        'type': 'keyword'
-                    },
-                    'Gene': {
-                        'type': 'text'
-                    },
-                    'Notes': {
-                        'type': 'text'
-                    },
-                    'PMID': {
-                        'type': 'integer'
-                    },
-                    'Phenotype Category': {
-                        'normalizer': 'keyword_lowercase_normalizer',
-                        'type': 'keyword'
-                    },
-                    'Sentence': {
-                        'type': 'text'
-                    },
-                    'Significance': {
-                        'type': 'text'
-                    },
-                    'StudyParameters': {
-                        'normalizer': 'keyword_lowercase_normalizer',
-                        'type': 'keyword'
-                    },
-                    'Variant': {
-                        'type': 'text'
+                'annotations': {
+                    'properties': {
+                        'alleles': {
+                            'type': 'text'
+                            },
+                        'annotation_id': {
+                            'type': 'integer'
+                            },
+                        'chemical': {
+                            'type': 'text'
+                            },
+                        'chromosome': {
+                            'normalizer': 'keyword_lowercase_normalizer',
+                            'type': 'keyword'
+                            },
+                        'gene': {
+                            'type': 'text',
+                            'copy_to': [
+                                'all'
+                                ]
+                            },
+                        'notes': {
+                            'type': 'text'
+                            },
+                        'pmid': {
+                            'type': 'integer'
+                            },
+                        'phenotype_category': {
+                            'normalizer': 'keyword_lowercase_normalizer',
+                            'type': 'keyword'
+                            },
+                        'sentence': {
+                            'type': 'text'
+                            },
+                        'significance': {
+                            'type': 'text'
+                            },
+                        'studyparameters': {
+                            'normalizer': 'keyword_lowercase_normalizer',
+                            'type': 'keyword'
+                            },
+                        'variant': {
+                            'type': 'text',
+                            'copy_to': [
+                                'all'
+                                ]
+                            }
+                        }
                     }
                 }
-            }
-        }
 
