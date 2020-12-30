@@ -19,6 +19,7 @@ def load_annotations(data_folder):
         # we'll remove space in keys to make queries easier. Also, lowercase is preferred
         # for a BioThings API. We'll an helper function from BioThings SDK
         process_key = lambda k: k.replace(" ","_").lower()
+        process_key = lambda k: k.replace(" ","_")
         rec = dict_convert(rec,keyfn=process_key)
         # remove NaN values, not indexable
         rec = dict_sweep(rec,vals=[np.nan])
