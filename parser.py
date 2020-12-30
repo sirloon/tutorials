@@ -25,5 +25,5 @@ def load_annotations(data_folder):
         results.setdefault(_id,[]).append(rec)
         
     for _id,docs in results.items():
-        doc = {"_id": _id, "annotations" : docs}
+        doc = {"_id": _id, "annotations2" : docs}
         yield doc
