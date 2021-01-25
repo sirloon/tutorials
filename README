@@ -1,5 +1,5 @@
-From annotations.zip:
-- var_drug_ann.tsv: variant-gene-drug annotations
+From exampletabulatedVCF:
+- exampletabulatedVCF.txt: example of tabulated file from VCF transformation 
  
 From drugLabels.zip:
 - drugLabels.byGene.tsv: per gene, drugs which impact them
